@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  password  String
+  createdAt DateTime @default(now())
+  email     String   @unique
+  tablas    Tabla[]
+}
+
+model Tabla {
+  id       Int       @id @default(autoincrement())
+  nombre   String
+  userId   Int
+  columnas Columna[]
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Columna {
+  id      Int     @id @default(autoincrement())
+  nombre  String
+  color   Int
+  tablaId Int
+  tabla   Tabla   @relation(fields: [tablaId], references: [id], onDelete: Cascade)
+  tareas  Tarea[]
+}
+
+model Tarea {
+  id          Int        @id @default(autoincrement())
+  nombre      String
+  descripcion String?
+  columnaId   Int
+  subtareas   Subtarea[]
+  columna     Columna    @relation(fields: [columnaId], references: [id], onDelete: Cascade)
+}
+
+model Subtarea {
+  ind        Int      @id @default(autoincrement())
+  titulo     String
+  finalizada Boolean?
+  tareaId    Int
+  tarea      Tarea    @relation(fields: [tareaId], references: [id], onDelete: Cascade)
+}
