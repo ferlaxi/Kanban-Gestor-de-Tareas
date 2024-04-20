@@ -1,9 +1,9 @@
-
 # Kanban - Gestor de Tareas Full Stack
 
 Proyecto sobre un Gestor de Tareas donde se puede realizar las operaciones de CRUD y mantener almacenados tablas, columnas, tareas, subtareas en una base de datos de PostgreSQL.
 
 ## App construida con:
+
 ![NextJs](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 
 ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
@@ -23,9 +23,11 @@ Proyecto sobre un Gestor de Tareas donde se puede realizar las operaciones de CR
 ![Cap4](https://i.postimg.cc/Vsg6fN8t/Captura-de-pantalla-2024-04-20-10-12-01.png)
 
 ## Demo
-[Kanban - Web Site](kanban-gestor-de-tareas.vercel.app)
+
+[Kanban - Web Site](https://kanban-gestor-de-tareas.vercel.app/auth/login?callbackUrl=https%3A%2F%2Fkanban-gestor-de-tareas.vercel.app%2F)
 
 Cuenta de prueba a modo de demostración.
+
 ```
 Usuario: prueba@correo.com
 Contraseña: prueba
