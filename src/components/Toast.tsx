@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function Toast({ mensaje }: any) {
-  function errorMensaje() {
+  function ErrorMensaje() {
     useEffect(() => {
       const notify = () =>
         toast.error(mensaje.msg, {
@@ -14,7 +14,7 @@ export default function Toast({ mensaje }: any) {
     }, [mensaje.estado]);
   }
 
-  function exitoMensaje() {
+  function ExitoMensaje() {
     useEffect(() => {
       const notify = () =>
         toast.success(mensaje.msg, {
@@ -28,7 +28,7 @@ export default function Toast({ mensaje }: any) {
   return (
     <div
       className={`${
-        mensaje.error ? errorMensaje() : exitoMensaje()
+        mensaje.error ? ErrorMensaje() : ExitoMensaje()
       } font-bold text-[17px]`}
     >
       <Toaster />
