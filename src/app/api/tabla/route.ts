@@ -1,7 +1,5 @@
 import prisma from "@/libs/prisma";
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/lib/auth";
 
 export async function GET() {
   try {
@@ -17,14 +15,12 @@ export async function GET() {
 export async function POST(request: Request) {
   const { nombre } = await request.json();
 
-  const session = await getServerSession(authOptions);
-
   const tablaNueva = await prisma.tabla.create({
     data: {
       nombre: nombre,
       user: {
         connect: {
-          id: parseInt(session?.id),
+          id: 1,
         },
       },
     },
