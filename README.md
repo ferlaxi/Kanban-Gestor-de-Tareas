@@ -25,10 +25,3 @@ Proyecto sobre un Gestor de Tareas donde se puede realizar las operaciones de CR
 ## Demo
 
 [Kanban - Web Site](https://kanban-gestor-de-tareas.vercel.app/auth/login?callbackUrl=https%3A%2F%2Fkanban-gestor-de-tareas.vercel.app%2F)
-
-Cuenta de prueba a modo de demostración.
-
-```
-Usuario: prueba@correo.com
-Contraseña: prueba
-```
